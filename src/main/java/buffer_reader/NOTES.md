@@ -1,0 +1,4 @@
+- Gepeto https://chatgpt.com/share/df91866e-b557-4267-a8d0-d45c189e3f3f
+- liga no source code dos bagui (digo Objeto String BufferedReader e os carai)
+- Dwigth - "Jim, Question [...]" https://stackoverflow.com/questions/72129135/why-if-i-try-to-print-an-object-i-get-the-name-of-the-class-followed-by-a-hexade
+- anotha quest https://stackoverflow.com/questions/4712139/why-does-the-default-object-tostring-include-the-hashcode
