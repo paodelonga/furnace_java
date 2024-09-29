@@ -9,17 +9,11 @@ public class VPerson {
         this.modeller = modeller;
     }
 
-    // External Viewer Getters
-    public String getName() {
-        return modeller.getName();
-    }
-    public String getCPF() {
-        return modeller.getCPF();
-    }
-    public String getNumber() {
-        return modeller.getNumber();
-    }
-    public Integer getAge() {
-        return modeller.getAge();
+    // External Viewer Getter
+    public void getPersonDetails() {
+        System.out.println(modeller.getName());
+        System.out.println(modeller.getNumber());
+        System.out.println(modeller.getCPF());
+        System.out.println(modeller.getAge());
     }
 }

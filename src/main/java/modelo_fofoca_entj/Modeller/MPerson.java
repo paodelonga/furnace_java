@@ -29,18 +29,18 @@ public class MPerson {
 
     // Internal Modeller Getters
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public String getCPF() {
-        return this.cpf;
+        return cpf;
     }
 
     public String getNumber() {
-        return this.number;
+        return number;
     }
 
     public Integer getAge() {
-        return this.age;
+        return age;
     }
 }
