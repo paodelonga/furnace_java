@@ -13,17 +13,17 @@ public class MPerson {
         this.age = age;
     }
 
-    // Internal Modeller Updaters
-    public void updateName(String person_name) {
+    // Internal Modeller Setters
+    public void setName(String person_name) {
         this.name = person_name;
     }
-    public void updateCPF(String person_cpf) {
+    public void setCPF(String person_cpf) {
         this.cpf = person_cpf;
     }
-    public void updateNumber(String person_number) {
+    public void setNumber(String person_number) {
         this.number = person_number;
     }
-    public void updateAge(Integer person_age) {
+    public void setAge(Integer person_age) {
         this.age = person_age;
     }
 
