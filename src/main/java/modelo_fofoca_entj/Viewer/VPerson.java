@@ -18,6 +18,6 @@ public class VPerson {
         System.out.println("Number: " + modeller.getNumber());
         System.out.println("CPF: " + modeller.getCPF());
         System.out.println("Age: " + modeller.getAge());
-        System.out.println("");
+        System.out.print("\n");
     }
 }
