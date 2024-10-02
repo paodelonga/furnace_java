@@ -9,6 +9,7 @@ public class App {
         MPerson personModeller = new MPerson("Ana", "457.246.325-21", "98327573727", 18);
         CPerson personController = new CPerson(personModeller);
         VPerson personVisualizer = new VPerson(personModeller, personController);
+
         personVisualizer.getPersonDetails();
 
         personController.updateName("Carla");

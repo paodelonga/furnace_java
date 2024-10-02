@@ -31,15 +31,12 @@ public class MPerson {
     public String getName() {
         return name;
     }
-
     public String getCPF() {
         return cpf;
     }
-
     public String getNumber() {
         return number;
     }
-
     public Integer getAge() {
         return age;
     }
