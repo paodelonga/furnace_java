@@ -4,6 +4,8 @@
 
 package arrays;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         String[] arr0;
@@ -17,7 +19,7 @@ public class Main {
         arr1[2] = "arr1: 2;1";
         arr1[3] = "arr1: 3;2";
 
-        String[] arr2 = new String[] {"A1", "B2", "C3", "D4", "E5"};
+        String[] arr2 = new String[] {"A1", "B2", "C3", "D4", "E5", "F6", "G7", "H8", "I9", "J8", "K9", "L10"};
 
         String[] arr3 = {"A", "B", "C"};
 
