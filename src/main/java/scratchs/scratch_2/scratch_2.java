@@ -1,4 +1,4 @@
-package modelo_fofoca_entj.scratchs;
+package scratchs.scratch_2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,6 +11,7 @@ public class scratch_2 {
 
         List<String> palavras = new ArrayList<>(Arrays.stream(arr2).toList());
         // palavras.addAll(Arrays.stream(arr2).toList());
+        ListIterator<String> identificador = palavras.listIterator();
 
         // ListIterator<String> it = palavras.listIterator();
         // while (it.hasNext()) {System.out.println(it.next());}

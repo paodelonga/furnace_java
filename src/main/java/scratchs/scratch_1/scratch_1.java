@@ -1,9 +1,9 @@
-package modelo_fofoca_entj.scratchs;
+package scratchs.scratch_1;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
 
-public class scratch {
+public class scratch_1 {
     public static void main(String[] args) {
 
         // Make a collection
