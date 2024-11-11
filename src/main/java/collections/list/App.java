@@ -1,16 +1,15 @@
-package collections.set;
+package collections.list;
 
 import collections.Pessoa;
 
-import java.util.HashSet;
+import java.util.LinkedList;
 
 public class App {
-    private static HashSet<Pessoa> pessoas;
+    private static LinkedList<Pessoa> pessoas;
 
-    private static Pessoa adicionarPessoa(Pessoa pessoa) {
+    private static void adicionarPessoa(Pessoa pessoa) {
         pessoas.add(pessoa);
-        return pessoa;
-        // System.out.printf("%s %d%n", pessoa.nome(), pessoa.idade());
+        System.out.printf("%s %d %d%n", pessoa.nome(), pessoa.idade(), pessoas.indexOf(pessoa));
     }
 
     private static void exibirPessoas() {
@@ -20,7 +19,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        pessoas = new HashSet<Pessoa>();
+        pessoas = new LinkedList<Pessoa>();
 
         adicionarPessoa(new Pessoa("João Silva", 25));
         adicionarPessoa(new Pessoa("Maria Oliveira", 30));
@@ -39,7 +38,5 @@ public class App {
         adicionarPessoa(new Pessoa("Carlos Teixeira", 34));
         adicionarPessoa(new Pessoa("Gabriela Barbosa", 21));
         adicionarPessoa(new Pessoa("Thiago Moreira", 33));
-
-        exibirPessoas();
     }
 }
