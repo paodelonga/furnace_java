@@ -8,8 +8,10 @@ public class App {
     private static LinkedList<Pessoa> pessoas;
 
     private static void adicionarPessoa(Pessoa pessoa) {
-        pessoas.add(pessoa);
-        System.out.printf("%s %d %d%n", pessoa.nome(), pessoa.idade(), pessoas.indexOf(pessoa));
+        if(!pessoas.contains(pessoa)) {
+            pessoas.add(pessoa);
+            System.out.printf("%s %d %d%n", pessoa.nome(), pessoa.idade(), pessoas.indexOf(pessoa));
+        }
     }
 
     private static void exibirPessoas() {
@@ -30,6 +32,7 @@ public class App {
         adicionarPessoa(new Pessoa("Rafael Azevedo", 29));
         adicionarPessoa(new Pessoa("Camila Almeida", 24));
         adicionarPessoa(new Pessoa("Bruno Rocha", 42));
+        adicionarPessoa(new Pessoa("Bruno Rocha", 31));
         adicionarPessoa(new Pessoa("Bruno Rocha", 31));
         adicionarPessoa(new Pessoa("Fernando Nunes", 31));
         adicionarPessoa(new Pessoa("Julia Mendes", 26));
