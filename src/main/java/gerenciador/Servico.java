@@ -1,5 +1,9 @@
 package gerenciador;
 
+import gerenciador.Entidade.Hospede;
+import gerenciador.Entidade.Quarto;
+import gerenciador.Entidade.Reserva;
+
 public class Servico {
         /*
     1. Alugar quarto

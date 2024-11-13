@@ -1,4 +1,4 @@
-package gerenciador;
+package gerenciador.Entidade;
 
 import java.util.LinkedList;
 
