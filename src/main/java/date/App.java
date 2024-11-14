@@ -13,7 +13,6 @@ public class App {
         DateTimeFormatter formatador = DateTimeFormatter.ofPattern("HH:mm:ss, dd/MM/yyyy");
 
         System.out.println(hora_local);
-        System.out.println(hora_local.format(formatador));
 
         // // hora minuto segundo dia mes ano
         // // minuto hora dia mes

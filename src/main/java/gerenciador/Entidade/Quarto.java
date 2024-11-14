@@ -1,27 +1,28 @@
 package gerenciador.Entidade;
 
-import gerenciador.Tipo.QuartoTipo;
+import gerenciador.Tipo.QuartoNome;
 
 import java.util.Objects;
 
 public class Quarto  {
     private Integer numero;
-    private QuartoTipo tipo;
+    private QuartoNome nome;
     private String idHospede;
     private Integer idReserva;
 
     public Quarto() {}
 
-    public Quarto(Integer numero, QuartoTipo tipo) {
+    public Quarto(Integer numero, QuartoNome nome) {
         this.numero = numero;
+        this.nome = nome;
     }
 
     public Integer getNumero() {
         return numero;
     }
 
-    public QuartoTipo getTipo() {
-        return tipo;
+    public QuartoNome getNome() {
+        return nome;
     }
 
     public String getIdHospede() {
@@ -36,18 +37,18 @@ public class Quarto  {
         this.numero = numero;
         return this;
     }
-    public Quarto setTipo(QuartoTipo tipo) {
-        this.tipo = tipo;
+    public Quarto setNome(QuartoNome nome) {
+        this.nome = nome;
         return this;
     }
 
-    public Quarto setIdHospede(String idHospede) {
-        this.idHospede = idHospede;
+    public Quarto setIdHospede(String id_hospede) {
+        idHospede = id_hospede;
         return this;
     }
 
-    public Quarto setIdReserva(Integer idReserva) {
-        this.idReserva = idReserva;
+    public Quarto setIdReserva(Integer id_reserva) {
+        idReserva = id_reserva;
         return this;
     }
 

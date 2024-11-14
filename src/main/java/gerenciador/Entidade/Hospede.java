@@ -41,13 +41,13 @@ public class Hospede {
         return this;
     }
 
-    public Hospede setIdQuarto(Integer idQuarto) {
-        this.idQuarto = idQuarto;
+    public Hospede setIdQuarto(Integer id_quarto) {
+        idQuarto = id_quarto;
         return this;
     }
 
-    public Hospede setIdReserva(Integer idReserva) {
-        this.idReserva = idReserva;
+    public Hospede setIdReserva(Integer id_reserva) {
+        idReserva = id_reserva;
         return this;
     }
 

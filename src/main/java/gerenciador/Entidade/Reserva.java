@@ -1,12 +1,13 @@
 package gerenciador.Entidade;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Reserva {
     private Integer identificador;
     private Quarto quarto;
     private Hospede hospede;
-    private Double valor;
+    private BigDecimal valor;
 
     public Reserva() {
     }
@@ -35,7 +36,7 @@ public class Reserva {
         return hospede;
     }
 
-    public Double getValor() {
+    public BigDecimal getValor() {
         return valor;
     }
 
@@ -54,7 +55,7 @@ public class Reserva {
         return this;
     }
 
-    public Reserva setValor(Double valor) {
+    public Reserva setValor(BigDecimal valor) {
         this.valor = valor;
         return this;
     }

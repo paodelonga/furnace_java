@@ -1,6 +1,12 @@
 package gerenciador.Entidade;
 
+import gerenciador.Tipo.QuartoNome;
+
+import java.math.BigDecimal;
+import java.util.EnumMap;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 public class Hotel {
     private String nome;
@@ -8,12 +14,8 @@ public class Hotel {
     private LinkedList<Reserva> listaReservas;
     private LinkedList<Quarto> listaQuartos;
     private LinkedList<Hospede> listaHospedes;
-
-    public Hotel() {
-        this.listaReservas = new LinkedList<Reserva>();
-        this.listaQuartos = new LinkedList<Quarto>();
-        this.listaHospedes = new LinkedList<Hospede>();
-    }
+    private EnumMap<QuartoNome, Integer> tabelaQuartos;
+    private EnumMap<QuartoNome, BigDecimal> tabelaValores;
 
     public Hotel(String nome, Integer quantidade_reserva_maxima) {
         this.nome = nome;
@@ -44,6 +46,14 @@ public class Hotel {
         return listaHospedes;
     }
 
+    public EnumMap<QuartoNome, Integer> getTabelaQuartos() {
+        return tabelaQuartos;
+    }
+
+    public EnumMap<QuartoNome, BigDecimal> getTabelaValores() {
+        return tabelaValores;
+    }
+
     public Hotel setNome(String nome) {
         this.nome = nome;
         return this;
@@ -69,25 +79,42 @@ public class Hotel {
         return this;
     }
 
+    public Hotel setTabelaQuartos(EnumMap<QuartoNome, Integer> tabela_quartos) {
+        tabelaQuartos = tabela_quartos;
+        return this;
+    }
+
+    public Hotel setTabelaValores(EnumMap<QuartoNome, BigDecimal> tabela_valores) {
+        tabelaValores = tabela_valores;
+        return this;
+    }
+
     public Boolean adicionaReserva(Reserva reserva) {
-        if(listaReservas.size() < quantidadeReservaMaxima) {
+        if (listaReservas.size() < quantidadeReservaMaxima) {
             return !listaReservas.contains(reserva) && listaReservas.add(reserva);
         }
         return false;
     }
 
-    public Boolean adicionarQuarto(Quarto quarto) {
-        if(listaQuartos.size() < quantidadeReservaMaxima) {
+    public Boolean adicionaQuarto(Quarto quarto) {
+        if (listaQuartos.size() < quantidadeReservaMaxima) {
             return !listaQuartos.contains(quarto) && listaQuartos.add(quarto);
         }
         return false;
     }
 
-    public Boolean adicionarHospede(Hospede hospede) {
-        if(listaHospedes.size() < quantidadeReservaMaxima) {
+    public Boolean adicionaHospede(Hospede hospede) {
+        if (listaHospedes.size() < quantidadeReservaMaxima) {
             return !listaHospedes.contains(hospede) && listaHospedes.add(hospede);
         }
         return false;
+    }
+
+    public Boolean adicionaQuartoTabela(QuartoNome nome, BigDecimal valor, Integer quantidade) {
+        tabelaQuartos.put(nome, quantidade);
+        tabelaValores.put(nome, valor);
+
+        return tabelaQuartos.containsKey(nome) && tabelaValores.containsKey(nome);
     }
 
     public Boolean removeReserva(Reserva reserva) {
@@ -100,5 +127,25 @@ public class Hotel {
 
     public Boolean removeHospede(Hospede hospede) {
         return listaHospedes.remove(hospede);
+    }
+
+    public Boolean removeQuartoTabela(QuartoNome nome) {
+        tabelaQuartos.remove(nome);
+        tabelaValores.remove(nome);
+
+        return !(tabelaQuartos.containsKey(nome) && tabelaValores.containsKey(nome));
+    }
+
+    public Reserva obterReserva(Reserva reserva) {
+        return listaReservas.get(listaReservas.indexOf(reserva));
+    }
+    public Quarto obterQuarto(Quarto quarto) {
+        return listaQuartos.get(listaQuartos.indexOf(quarto));
+    }
+    public Hospede obterHospede(Hospede hospede) {
+        return listaHospedes.get(listaHospedes.indexOf(hospede));
+    }
+    public Map<BigDecimal, Integer> obterQuartoTabela(QuartoNome nome) {
+        return Map.of(tabelaValores.get(nome), tabelaQuartos.get(nome));
     }
 }
