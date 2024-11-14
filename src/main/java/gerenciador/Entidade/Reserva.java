@@ -9,9 +9,6 @@ public class Reserva {
     private Hospede hospede;
     private BigDecimal valor;
 
-    public Reserva() {
-    }
-
     public Reserva(Integer identificador, Quarto quarto, Hospede hospede) {
         this.identificador = identificador;
         this.quarto = quarto;
@@ -24,6 +21,7 @@ public class Reserva {
         this.hospede.setIdReserva(this.identificador);
     }
 
+    // Getters
     public Integer getIdentificador() {
         return identificador;
     }
@@ -40,6 +38,7 @@ public class Reserva {
         return valor;
     }
 
+    // Setters
     public Reserva setIdentificador(Integer identificador) {
         this.identificador = identificador;
         return this;
@@ -60,6 +59,7 @@ public class Reserva {
         return this;
     }
 
+    // Internals
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;

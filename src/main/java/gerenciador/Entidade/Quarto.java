@@ -2,6 +2,7 @@ package gerenciador.Entidade;
 
 import gerenciador.Tipo.QuartoNome;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Quarto  {
@@ -10,13 +11,12 @@ public class Quarto  {
     private String idHospede;
     private Integer idReserva;
 
-    public Quarto() {}
-
     public Quarto(Integer numero, QuartoNome nome) {
         this.numero = numero;
         this.nome = nome;
     }
 
+    // Getters
     public Integer getNumero() {
         return numero;
     }
@@ -33,10 +33,12 @@ public class Quarto  {
         return idReserva;
     }
 
+    // Setters
     public Quarto setNumero(Integer numero) {
         this.numero = numero;
         return this;
     }
+
     public Quarto setNome(QuartoNome nome) {
         this.nome = nome;
         return this;
@@ -52,6 +54,7 @@ public class Quarto  {
         return this;
     }
 
+    // Internals
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;

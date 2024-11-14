@@ -4,24 +4,44 @@ import gerenciador.Entidade.Hospede;
 import gerenciador.Entidade.Hotel;
 import gerenciador.Entidade.Quarto;
 import gerenciador.Entidade.Reserva;
+import gerenciador.Tipo.QuartoNome;
+
+import java.math.BigDecimal;
 
 public class Servico {
-    /*
-    1. Alugar quarto
-    2. Consultar reserva
-    3. Cancelar reserva
-    4. Pagar reserva
-    5. Fazer CheckIn
-    6. Fazer CheckOut
-    7. Listar reservas
-    */
+    Hotel hotel;
 
     public Servico(Integer quantidade_maxima_reserva) {
         Hotel hotel = new Hotel("Lumen", quantidade_maxima_reserva);
     }
 
-    // Coisas internas (eu quero usar mvc :crying :crying
+    // Coistas internas (eu quero usar mvc :crying :crying
+    public void alterarNomeHotel(String nome) {}
 
+    // Adders
+    public void adicionarReserva(Reserva reserva) {}
+    public void adicionarQuarto(Quarto quarto) {}
+    public void adicionarHospede(Hospede hospede) {}
+    public void adicionarQuartoTabela(QuartoNome nome, BigDecimal valor, Integer quantidade) {}
+
+    // Obters
+    public void obterNomeHotel() {}
+    public void obterReserva(Reserva reserva) {}
+    public void obterQuarto(Quarto quarto) {}
+    public void obterHospede(Hospede hospede) {}
+    public void obterQuartoTabela(QuartoNome nome) {}
+
+    // Listers
+    public void obterListaReservas() {}
+    public void obterListaQuartos() {}
+    public void obterListaHospedes() {}
+    public void obterListaQuartosTabela() {}
+
+    // Removers
+    public void removerReserva(Reserva reserva) {}
+    public void removerQuarto(Quarto quarto) {}
+    public void removerHospede(Hospede hospede) {}
+    public void removerQuartoTabela(QuartoNome nome) {}
 
     // Coisitas externas
     public void alugarQuarto(Hospede hospede, Quarto quarto) {

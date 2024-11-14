@@ -8,13 +8,12 @@ public class Hospede {
     private Integer idQuarto;
     private Integer idReserva;
 
-    public Hospede() {}
-
     public Hospede(String nome, String documento) {
         this.nome = nome;
         this.documento = documento;
     }
 
+    // Getters
     public String getNome() {
         return nome;
     }
@@ -36,6 +35,7 @@ public class Hospede {
         return this;
     }
 
+    // Setters
     public Hospede setNome(String nome) {
         this.nome = nome;
         return this;
@@ -51,6 +51,7 @@ public class Hospede {
         return this;
     }
 
+    // Internals
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
